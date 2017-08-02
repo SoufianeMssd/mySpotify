@@ -1,0 +1,12 @@
+.fio{
+  width: 160px;
+  border-bottom: solid 1px #3B3534;
+}
+.io{
+  border-bottom: solid 1px #3B3534  ;
+  margin-top: 10px;
+}
+.abtDiv{
+  float: right;
+  margin-top: 35px;
+}

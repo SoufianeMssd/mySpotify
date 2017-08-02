@@ -24,12 +24,12 @@ export class ArtistComponent implements OnInit {
           this.spotifyService.getArtist(id)
             .subscribe(artist => {
               this.artist = artist;
-              console.log(artist);
+              // console.log(artist);
             })
             this.spotifyService.getAlbums(id)
             .subscribe(albums => {
               this.albums = albums.data;
-              console.log(albums.data);
+              // console.log(albums.data);
             })
         } )
   }

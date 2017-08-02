@@ -1,5 +1,11 @@
-.col-md-8{
-  margin-left: 540px;
-  margin-bottom: 100px;
-
+.album-header{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #333
+}
+.album-thumb{
+  width: 350px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
 }

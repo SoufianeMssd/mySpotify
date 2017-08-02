@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-8">
         <h4 *ngIf="album.contributors.length > 0">By :<span *ngFor="let cont of album.contributors" >
-        , {{cont.name}}
+        << {{cont.name}} >>
         </span></h4>
         <h2> {{album.title}} </h2>
         <h5>Release Date: {{album.release_date}} </h5>
@@ -16,4 +16,15 @@
       </div>
     </div>
   </header>
+  <div class="album-tracks" >
+    <h2>Album Tracks</h2>
+    <div *ngFor="let track of album.tracks.data" >
+      <div class="well" >
+        <h4> {{track.title}} </h4>
+        <a class="btn btn-default" target="_blank" [href]='sanitizer.bypassSecurityTrustResourceUrl(track.preview)'>Preview</a>
+        <a class="btn btn-default" target="_blank" [href]='sanitizer.bypassSecurityTrustResourceUrl(track.link)' >Listen</a>
+
+      </div>
+    </div>
+  </div>
 </div>

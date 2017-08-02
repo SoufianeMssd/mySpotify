@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
     this.spotifyService.searchMusic(this.searchStr)
       .subscribe(res => {
         this.searchRes = res.data;
-       console.log(res.data);
+      //  console.log(res.data);
       });
   }
   ngOnInit() {
