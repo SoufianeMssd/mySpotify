@@ -1,0 +1,26 @@
+<div *ngIf="artist">
+  <header class="artist-header" >
+     <div *ngIf="artist.picture_big.length > 0" >
+      <img class="artist-thumb img-circle" [src]='sanitizer.bypassSecurityTrustResourceUrl(artist.picture_big)'>
+     </div>
+
+    <h1> {{artist.name}} </h1>
+    <p><strong>ArtistID : </strong> {{artist.id}}</p>
+
+  </header>
+  <div class="artist-albums">
+    <div class="row">
+      <div *ngFor="let album of albums" >
+        <div class="col-md-3">
+          <div class="well album" >
+            <div *ngIf="album.cover_big" >
+              <img class="album-thumb img-thumbnail" [src]='sanitizer.bypassSecurityTrustResourceUrl(album.cover_big)'>
+              <h4> {{album.title}} </h4>
+              <a class="btn btn-default btn-block" routerLink="/album/{{album.id}} " >Album Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="album" *ngIf="album" >
+  <header class="album-header" >
+    <div class="row">
+      <div class="col-md-4">
+        <div *ngIf="album.cover_big" >
+          <img class="album-thumb" [src]='sanitizer.bypassSecurityTrustResourceUrl(album.cover_big)'>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h4 *ngIf="album.contributors.length > 0">By :<span *ngFor="let cont of album.contributors" >
+        , {{cont.name}}
+        </span></h4>
+        <h2> {{album.title}} </h2>
+        <h5>Release Date: {{album.release_date}} </h5>
+        <a class="btn btn-primary" href="{{album.link}}">View In Deezer</a>
+      </div>
+    </div>
+  </header>
+</div>
